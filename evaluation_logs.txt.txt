@@ -1,0 +1,661 @@
+text 1
+EN
+{
+  "fact_1": {
+    "score": 0.5,
+    "reason": "States that standard laws assume model size and data act independently, but omits the 'cross-derivative of zero' detail."
+  },
+  "fact_2": {
+    "score": 0.5,
+    "reason": "Mentions Skaling couples capacity and data via a single interaction exponent, but does not explicitly state it generalizes the Chinchilla form."
+  },
+  "fact_3": {
+    "score": 0.5,
+    "reason": "Mentions reducing MAPE by 1.5x to 3x, but omits 'across both interpolation and extrapolation'."
+  },
+  "fact_4": {
+    "score": 1.0,
+    "reason": "Explicitly states winning on 76% of configurations with a median improvement of 2.2x."
+  },
+  "fact_5": {
+    "score": 1.0,
+    "reason": "Explicitly mentions extrapolating the full grid using ~10x less compute than a uniform sweep with an L-shape sparse grid."
+  },
+  "total_score": 3.5
+}
+---------------------
+UK
+{
+  "fact_1": {
+    "score": 1.0,
+    "reason": "Explicitly states that standard laws assume independence of model size and data, including the zero cross-derivative ('нульову перехресну похідну')."
+  },
+  "fact_2": {
+    "score": 1.0,
+    "reason": "Explicitly states that Skaling generalizes the Chinchilla form by coupling capacity and data via a single interaction exponent."
+  },
+  "fact_3": {
+    "score": 0.5,
+    "reason": "States MAPE is reduced by 1.5x–3x, but omits 'across both interpolation and extrapolation'."
+  },
+  "fact_4": {
+    "score": 1.0,
+    "reason": "Explicitly states winning in 76% of configurations with a median improvement of 2.2x."
+  },
+  "fact_5": {
+    "score": 1.0,
+    "reason": "Explicitly mentions extrapolating the full grid with ~10x less compute using an L-shaped sparse grid (omits explicit comparison to 'uniform sweeps', though implied)."
+  },
+  "total_score": 4.5
+}
+
+------------
+text 2
+
+EN
+{
+  "fact_1": {
+    "score": 1.0,
+    "reason": "Defines Session Constraints as persistent user instructions meant to bind behavior throughout a session."
+  },
+  "fact_2": {
+    "score": 1.0,
+    "reason": "Explicitly states current compactors retain an average of only 17% of injected constraints and frequently perform worse than no compaction."
+  },
+  "fact_3": {
+    "score": 1.0,
+    "reason": "Explicitly states the loss is structural and fluctuates based on compactor, prompt, context length, phrasing, and injection position."
+  },
+  "fact_4": {
+    "score": 1.0,
+    "reason": "Explicitly states a plug-and-play extractor recovers over 90% retention without modifying the underlying model or compactor."
+  },
+  "fact_5": {
+    "score": 1.0,
+    "reason": "Explicitly mentions COMPINT is introduced to measure this across multi-turn chat, agentic trajectory, and long-horizon research."
+  },
+  "total_score": 5.0
+}
+
+---------
+UK
+{
+  "fact_1": {
+    "score": 1.0,
+    "reason": "Mentions 'Обмеження сеансу (Session Constraints)' as persistent instructions lost during compaction."
+  },
+  "fact_2": {
+    "score": 1.0,
+    "reason": "Explicitly states modern compactors retain on average only 17% and often worsen results compared to no compaction."
+  },
+  "fact_3": {
+    "score": 1.0,
+    "reason": "Explicitly states retention is a structural problem depending on compactor, prompt, context length, phrasing, and injection position."
+  },
+  "fact_4": {
+    "score": 1.0,
+    "reason": "Explicitly states a parallel 'plug-and-play' extractor recovers over 90% retention without touching the model or compactor."
+  },
+  "fact_5": {
+    "score": 0.0,
+    "reason": "Completely omits the COMPINT benchmark name and the three specific evaluation scenarios (multi-turn chat, agentic trajectories, long-horizon research)."
+  },
+  "total_score": 4.0
+}
+
+
+------------
+TEXT 3
+
+EN 
+
+{
+  "fact_1": {
+    "score": 0.5,
+    "reason": "States asking for multiple approaches inflates reasoning by 2.4x to 7.4x and creates discarded branches, but omits 'three' discarded branches and 'without boosting success'."
+  },
+  "fact_2": {
+    "score": 0.5,
+    "reason": "Mentions maximum certainty wording increases test runs and tool calls, but omits context bloat ('розростання контексту')."
+  },
+  "fact_3": {
+    "score": 0.5,
+    "reason": "Mentions 18x the median, but omits '2.5x more tool calls' and 'take 3x longer'."
+  },
+  "fact_4": {
+    "score": 1.0,
+    "reason": "Explicitly states harness design amplifies costs by 5x to 30x."
+  },
+  "fact_5": {
+    "score": 1.0,
+    "reason": "Mentions bounded-efficiency phrasing specifies scope and acceptance criteria while preserving performance and cutting waste (omits 'stop conditions', core fact preserved)."
+  },
+  "total_score": 3.5
+}
+
+--------
+
+UK
+
+{
+  "fact_1": {
+    "score": 1.0,
+    "reason": "Explicitly states asking for multiple approaches increases reasoning by 2.4–7.4x (omits 'three discarded branches', core metric and claim preserved)."
+  },
+  "fact_2": {
+    "score": 1.0,
+    "reason": "Explicitly states requiring maximum certainty increases tool calls and duration without improving success."
+  },
+  "fact_3": {
+    "score": 1.0,
+    "reason": "Explicitly states runs become 18x more expensive, execute 2.5x more tool calls, and take 3x longer."
+  },
+  "fact_4": {
+    "score": 1.0,
+    "reason": "Explicitly states environment architecture (harness) changes task cost by 5–30x."
+  },
+  "fact_5": {
+    "score": 1.0,
+    "reason": "Explicitly mentions clear task formulation specifying criteria and stop conditions minimizes waste."
+  },
+  "total_score": 5.0
+}
+
+
+
+------------
+
+
+TEXT 4
+
+
+EN
+
+
+{
+  "fact_1": {
+    "score": 1.0,
+    "reason": "Explicitly states NOOA unifies prompt templates, tool schemas, callback code, and workflow graphs into standard Python objects."
+  },
+  "fact_2": {
+    "score": 1.0,
+    "reason": "Explicitly states methods define actions, fields hold state, docstrings serve as prompts, and type annotations act as contracts."
+  },
+  "fact_3": {
+    "score": 1.0,
+    "reason": "Explicitly states methods with a '...' body are executed at runtime via a validated LLM loop, while standard method bodies remain deterministic Python."
+  },
+  "fact_4": {
+    "score": 1.0,
+    "reason": "Explicitly lists typed input/output, pass-by-reference over live objects, code as action, and programmable loop engineering."
+  },
+  "fact_5": {
+    "score": 1.0,
+    "reason": "Explicitly mentions evaluation on SWE-bench Verified, Terminal-Bench 2.0, and ARC-AGI-3, making agent behavior testable and refactorable."
+  },
+  "total_score": 5.0
+}
+
+
+--------\
+
+UK
+
+
+
+{
+  "fact_1": {
+    "score": 1.0,
+    "reason": "States NOOA unifies prompt templates, tool schemas, callback code, and workflow graphs into a single Python object (minor phrasing distortion: 'агенти NVIDIA від NOOA', core fact preserved)."
+  },
+  "fact_2": {
+    "score": 1.0,
+    "reason": "Explicitly mentions action methods ('методи-дії'), state fields ('поля стану'), prompt docstrings ('докстрінги-підказки'), and typed contracts ('типізовані контракти')."
+  },
+  "fact_3": {
+    "score": 0.5,
+    "reason": "Mentions the boundary between probabilistic and deterministic behavior via '...' methods vs regular bodies, but omits that '...' methods are completed at runtime via a validated LLM loop."
+  },
+  "fact_4": {
+    "score": 0.0,
+    "reason": "Mentions combining 'six ideas' ('шість ідей'), completely omitting the specific features (typed data, pass-by-reference, code as action, programmable loop engineering)."
+  },
+  "fact_5": {
+    "score": 1.0,
+    "reason": "Explicitly mentions evaluation on SWE-bench Verified, Terminal-Bench 2.0, and ARC-AGI-3, making agent behavior testable and refactorable."
+  },
+  "total_score": 3.5
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------
+
+
+
+TEXT 5
+
+
+
+EN
+
+
+{
+  "fact_1": {
+    "score": 0.5,
+    "reason": "Mentions utilizing a markdown filesystem for long-term memory, but omits 'directory tree' and 'read/written with ordinary file tools'."
+  },
+  "fact_2": {
+    "score": 0.5,
+    "reason": "Names the management, search, and execution agents, but omits citation-based search ('з посиланнями') and distilling trajectories into skills ('зводить траєкторії в навички')."
+  },
+  "fact_3": {
+    "score": 1.0,
+    "reason": "Explicitly states organized stores halve retrieval costs for large materials."
+  },
+  "fact_4": {
+    "score": 1.0,
+    "reason": "Explicitly states answer quality remains flat and the store degrades for all but the strongest management agents."
+  },
+  "fact_5": {
+    "score": 1.0,
+    "reason": "Explicitly states changing the tool set alone reshapes the memory store as strongly as swapping models."
+  },
+  "total_score": 4.0
+}
+
+
+
+------------
+
+
+
+UK
+
+
+
+
+{
+  "fact_1": {
+    "score": 0.5,
+    "reason": "Mentions using a directory tree in Markdown format ('дерева каталогів у форматі Markdown') for long-term memory, but omits 'read/written with ordinary file tools'."
+  },
+  "fact_2": {
+    "score": 0.5,
+    "reason": "Mentions dividing roles into management, search, and execution, but omits citation-based search and distilling trajectories into skills."
+  },
+  "fact_3": {
+    "score": 1.0,
+    "reason": "Explicitly states organizing the store halves retrieval cost ('економію пошуку приблизно вдвічі') for large volumes of material."
+  },
+  "fact_4": {
+    "score": 0.5,
+    "reason": "States answer quality did not improve and worsened ('яка натомість погіршувалася') for all management agents except the strongest, slightly conflating store degradation with answer quality degradation."
+  },
+  "fact_5": {
+    "score": 1.0,
+    "reason": "Explicitly states changing the tool set transforms the memory store as strongly as replacing the model."
+  },
+  "total_score": 3.5
+}
+
+
+
+----------------
+
+
+TEXT 6
+
+
+EN
+
+
+{
+  "fact_1": {
+    "score": 1.0,
+    "reason": "Explicitly states that Harness Handbook converts sprawling agent harness codebases into a behavior-centric map linked directly to the source code."
+  },
+  "fact_2": {
+    "score": 1.0,
+    "reason": "Explicitly mentions that the tool is built automatically via static analysis and LLM-assisted structuring."
+  },
+  "fact_3": {
+    "score": 1.0,
+    "reason": "Explicitly describes the three-level map progressing from L1 system overview and L2 component overviews down to L3 source-backed unit details."
+  },
+  "fact_4": {
+    "score": 1.0,
+    "reason": "Explicitly states that BGPD guides agents from high-level behaviors to specific implementations and verifies candidate locations against current source code."
+  },
+  "fact_5": {
+    "score": 0.5,
+    "reason": "Mentions the bottleneck of locating files associated with a behavior and safely evolving growing systems, but omits the explicit shift from writing changes to locating them as self-improving harnesses grow."
+  },
+  "total_score": 4.5
+}
+
+
+-----------
+
+
+UK
+
+{
+  "fact_1": {
+    "score": 1.0,
+    "reason": "Explicitly states that Harness Handbook converts sprawling harness codebases into a behavior-centric map linked to the source code."
+  },
+  "fact_2": {
+    "score": 1.0,
+    "reason": "Explicitly mentions that it is automatically synthesized using static analysis and LLMs."
+  },
+  "fact_3": {
+    "score": 1.0,
+    "reason": "Explicitly outlines the three-level structure progressing from L1 architectural overview through L2 components to L3 modules."
+  },
+  "fact_4": {
+    "score": 1.0,
+    "reason": "Explicitly states that BGPD guides the agent from high-level behavior to implementation and checks candidate files against current code."
+  },
+  "fact_5": {
+    "score": 1.0,
+    "reason": "Explicitly states that the main bottleneck shifts from writing code to locating where changes are needed so systems can evolve safely."
+  },
+  "total_score": 5.0
+}
+
+
+
+--------
+
+
+TEXT 7
+
+EN
+
+
+
+{
+  "fact_1": {
+    "score": 0.5,
+    "reason": "Defines progressive disclosure in Agent Skills as exposing document details on demand, but omits packaging expertise into folders ('package expertise into folders')."
+  },
+  "fact_2": {
+    "score": 1.0,
+    "reason": "Explicitly states the first controlled comparison on InfiniteBench across three agent harnesses and three model families."
+  },
+  "fact_3": {
+    "score": 1.0,
+    "reason": "Explicitly notes that progressive disclosure offers significant gains when raw-document navigation is poor, but drops to near zero benefit with a strong harness."
+  },
+  "fact_4": {
+    "score": 1.0,
+    "reason": "Explicitly states that progressive disclosure is not a universal win and can add unnecessary complexity without improving accuracy."
+  },
+  "fact_5": {
+    "score": 1.0,
+    "reason": "Explicitly states that the measurements replace anecdotal intuition and help builders determine when packaging documents is worthwhile."
+  },
+  "total_score": 4.5
+}
+
+
+
+
+----------
+
+
+
+UK
+
+
+
+
+
+{
+  "fact_1": {
+    "score": 1.0,
+    "reason": "Explicitly states that Progressive Disclosure in Agent Skills groups knowledge into folders and loads only query-relevant fragments."
+  },
+  "fact_2": {
+    "score": 1.0,
+    "reason": "Explicitly mentions the first controlled study on InfiniteBench across three agent harnesses and three model families."
+  },
+  "fact_3": {
+    "score": 1.0,
+    "reason": "Explicitly states that the method significantly helps agents with weak navigation, whereas its advantage disappears with a strong harness."
+  },
+  "fact_4": {
+    "score": 1.0,
+    "reason": "Explicitly notes that progressive disclosure is not a universal improvement and can only complicate the system without increasing accuracy."
+  },
+  "fact_5": {
+    "score": 1.0,
+    "reason": "Explicitly mentions that previous effectiveness relied only on isolated examples and the study helps developers accurately determine when its use is worthwhile."
+  },
+  "total_score": 5.0
+}
+
+
+
+
+
+
+-----------
+
+
+TEXT 8
+
+
+
+
+EN
+
+
+
+
+{
+  "fact_1": {
+    "score": 1.0,
+    "reason": "Explicitly frames a self-improving agent as a foundation model paired with a scaffold of prompts, memory, tools, and control logic."
+  },
+  "fact_2": {
+    "score": 1.0,
+    "reason": "Explicitly categorizes self-induced updates into weight changes or scaffolding changes."
+  },
+  "fact_3": {
+    "score": 1.0,
+    "reason": "Explicitly organizes learning signals into three sources: generative demonstrations, evaluative feedback, and exploratory experience."
+  },
+  "fact_4": {
+    "score": 1.0,
+    "reason": "Explicitly states that full-scaffolding methods autonomously rewrite agent code via self-referential updates and generate-test-patch loops."
+  },
+  "fact_5": {
+    "score": 1.0,
+    "reason": "Explicitly notes that the unified framework helps builders navigate scattered research across software, web, gaming, science, and robotics."
+  },
+  "total_score": 5.0
+}
+
+
+
+
+UK
+
+
+
+
+
+
+{
+  "fact_1": {
+    "score": 1.0,
+    "reason": "Explicitly defines an agent as a foundation model with an operational scaffold consisting of prompts, memory, tools, and control logic."
+  },
+  "fact_2": {
+    "score": 1.0,
+    "reason": "Explicitly states that self-initiated updates are divided into weight changes or scaffold changes."
+  },
+  "fact_3": {
+    "score": 1.0,
+    "reason": "Explicitly groups methods by three learning signal sources: intrinsic generative demonstrations, intrinsic evaluative feedback, and extrinsic experience."
+  },
+  "fact_4": {
+    "score": 1.0,
+    "reason": "Explicitly states that the most open-ended approaches reprogram the agent via self-referential code updates and generate-test-patch cycles."
+  },
+  "fact_5": {
+    "score": 1.0,
+    "reason": "Explicitly mentions a unified classification across software, web technologies, gaming, science, and robotics to help developers navigate scattered literature."
+  },
+  "total_score": 5.0
+}
+
+
+
+
+TEXT 9
+
+
+
+
+EN
+
+
+
+{
+  "fact_1": {
+    "score": 1.0,
+    "reason": "Explicitly states that always-on agents depend on durable state spanning task ledgers, permissions, credentials, commitments, and provenance."
+  },
+  "fact_2": {
+    "score": 1.0,
+    "reason": "Explicitly frames state around authority, obligations, and externally committed effects."
+  },
+  "fact_3": {
+    "score": 1.0,
+    "reason": "Explicitly lists scoring every state item across six axes: authority, scope, mutability, provenance, recoverability, and actionability."
+  },
+  "fact_4": {
+    "score": 1.0,
+    "reason": "Explicitly traces the full state lifecycle from writing and retrieval to forgetting, auditing, and rollback."
+  },
+  "fact_5": {
+    "score": 1.0,
+    "reason": "Explicitly states that treating durable state as a governed, auditable resource prevents continuously operating agents from quietly accumulating risk."
+  },
+  "total_score": 5.0
+}
+
+
+
+
+
+UK
+
+
+
+
+{
+  "fact_1": {
+    "score": 1.0,
+    "reason": "Explicitly states that durable state extends beyond memory to include task ledgers, permissions, credentials, commitments, and provenance."
+  },
+  "fact_2": {
+    "score": 1.0,
+    "reason": "Explicitly covers authority, obligations, and already realized external effects in the real world."
+  },
+  "fact_3": {
+    "score": 1.0,
+    "reason": "Explicitly includes scoring each element across six axes: authority, scope, mutability, provenance, recoverability, and actionability."
+  },
+  "fact_4": {
+    "score": 1.0,
+    "reason": "Explicitly traces the complete lifecycle from writing, reading, and forgetting to auditing and rollback."
+  },
+  "fact_5": {
+    "score": 1.0,
+    "reason": "Explicitly notes that treating durable state as a governed and accountable resource helps avoid hidden risks in long-running systems."
+  },
+  "total_score": 5.0
+}
+
+
+
+
+TEXT 10
+
+
+EN
+
+
+
+{
+  "fact_1": {
+    "score": 1.0,
+    "reason": "Explicitly states that Sakana Fugu is a family of language-model orchestrators designed to combine specialized frontier LLMs into a collectively intelligent system."
+  },
+  "fact_2": {
+    "score": 1.0,
+    "reason": "Explicitly notes that it dynamically constructs query-adaptive agentic scaffolds rather than using fixed pipelines."
+  },
+  "fact_3": {
+    "score": 1.0,
+    "reason": "Explicitly reports achieving state-of-the-art performance across SWE-Bench Pro, Terminal Bench, LiveCodeBench, GPQA-Diamond, Humanity's Last Exam, and CharXiv Reasoning."
+  },
+  "fact_4": {
+    "score": 1.0,
+    "reason": "Explicitly describes the two released variants: standard Fugu (balancing answer quality and latency) and Fugu-Ultra (maximizing quality for the hardest problems)."
+  },
+  "fact_5": {
+    "score": 1.0,
+    "reason": "Explicitly mentions training via large-scale fine-tuning, evolutionary algorithms, and reinforcement learning toward collective-intelligence orchestration."
+  },
+  "total_score": 5.0
+}
+
+
+
+UK
+
+
+
+
+{
+  "fact_1": {
+    "score": 1.0,
+    "reason": "Explicitly identifies Sakana Fugu as a family of orchestrator models uniting specialized LLM agents."
+  },
+  "fact_2": {
+    "score": 1.0,
+    "reason": "Explicitly states that Fugu analyzes the query and dynamically builds an adaptive agentic structure instead of using fixed workflows."
+  },
+  "fact_3": {
+    "score": 1.0,
+    "reason": "Explicitly lists state-of-the-art results across SWE-Bench Pro, Terminal Bench, LiveCodeBench, GPQA-Diamond, Humanity's Last Exam, and CharXiv Reasoning."
+  },
+  "fact_4": {
+    "score": 1.0,
+    "reason": "Explicitly describes the two models: Fugu (balanced quality and latency for everyday tasks) and Fugu-Ultra (maximum quality for the hardest problems)."
+  },
+  "fact_5": {
+    "score": 1.0,
+    "reason": "Explicitly notes training via large-scale fine-tuning, evolutionary algorithms, and reinforcement learning pointing toward collective intelligence."
+  },
+  "total_score": 5.0
+}
+
+

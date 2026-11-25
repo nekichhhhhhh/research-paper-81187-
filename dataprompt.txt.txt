@@ -1,0 +1,10 @@
+EN PROMPT : Summarize the following text concisely in 3-4 sentences, preserving all key facts, numbers, and names. Do not add any introductory or concluding remarks.
+
+Text:
+[ВСТАВЬ СЮДА АНГЛИЙСКИЙ ТЕКСТ]
+
+
+UK PROMPT: Стисло підсумуй наведений нижче текст у 3-4 реченнях, зберігши всі ключові факти, цифри та імена. Не додавай жодних вступних чи заключних фраз.
+
+Текст:
+[ВСТАВЬ СЮДА УКРАЇНСЬКИЙ ТЕКСТ]

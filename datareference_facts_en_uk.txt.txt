@@ -1,0 +1,69 @@
+1. Skaling-Standard / Skaling
+Standard neural scaling laws assume model size and training data act on loss independently, baking in a cross-derivative of zero.
+Закон Skaling узагальнює форму «Чінчілла», зв’язуючи ємність і дані через єдиний експонент взаємодії.
+The additional term reduces mean absolute percentage error by 1.5x to 3x across both interpolation and extrapolation.
+Skaling перемагає у 76% конфігурацій із медіанним поліпшенням результату в 2,2 рази.
+It extrapolates full profiling grids using roughly 10x less compute than uniform sweeps by utilizing an L-shape sparse grid.
+
+2. Lost in Compaction / Втрати під час ущільнення
+Session Constraints are instructions like "do not delete any emails" meant to bind behavior for the rest of a session. 
+Сучасні компактори в середньому зберігають лише 17% введених обмежень, а в більшості випадків результат гірший, ніж без ущільнення. 
+Retention swings with the compactor, prompt, context length, phrasing, and injection position, making the loss structural.
+Виправлення не зачіпає компактор чи модель: паралельний екстрактор «plug-and-play» відновлює понад 90% збереження.
+COMPINT is introduced to evaluate compactors across multi-turn chat, agentic trajectories, and long-horizon research.   
+
+3. Prompt-Induced Waste / Втрати, спричинені підказками
+Asking for multiple approaches inflates reasoning by 2.4x to 7.4x and produces three discarded branches without boosting success.
+Формулювання, що вимагає максимальної впевненості, призводить до надлишкових тестів, викликів інструментів та розростання контексту.
+High redundant verification runs cost 18x the clean median, execute 2.5x more tool calls, and take 3x longer.
+Вартість одного успішного завдання коливається від 5 до 30 разів залежно від архітектури середовища (харнесу).
+Bounded-efficiency wording specifies scope, acceptance criteria, and stop conditions, keeping diagnosis robust while saving agent spend.   
+
+4. NOOA (NVIDIA Object-Oriented Agents)
+NVIDIA Object-Oriented Agents replaces prompt templates, tool schemas, callback code, and workflow graphs with Python objects.
+Методи агента — це дії, поля зберігають стан, docstrings є підказками, а анотації типів діють як контракти.
+A method body with "..." gets completed at runtime by a validated LLM loop, while normal bodies stay deterministic Python.
+Стаття стверджує поєднання типізованих даних, передачі за посиланням, коду як дії та програмованої інженерії циклів.
+Evaluated on SWE-bench Verified, Terminal-Bench 2.0, and ARC-AGI-3, making agent behavior testable and refactorable.
+
+5. Filesystem Memory Audited / Аудит пам’яті файлової системи
+Deployed agents keep long-term memory as a directory tree of markdown files read/written with ordinary file tools.
+Середовище формалізовано як агент управління, агент пошуку з посиланнями та агент виконання, що зводить траєкторії в навички.
+Organized stores roughly halve retrieval cost in long conversations and embodied tasks when the material is large.
+Answer quality stays flat, and store quality degraded for every management agent except the strongest one.
+Зміна лише набору інструментів перетворює сховище пам’яті так само сильно, як і заміна самої моделі.       
+
+6. Harness Handbook
+Harness Handbook turns a sprawling codebase harness into a behavior-centric map linked to the source.
+Посібник створюється автоматично через статичний аналіз та структурування за допомогою LLM.
+It features a three-level map progressing from L1 system overview and L2 component overviews to L3 source-backed units.
+BGPD веде агента від високорівневої поведінки до реалізації та перевіряє кандидати проти поточного коду.
+As self-improving harnesses grow, the bottleneck shifts from writing changes to locating them securely. 
+
+7. Progressive Disclosure, Measured / Поступове розкриття, виважене
+Agent Skills package expertise into folders loaded on demand, exposing only what a query needs.
+Автори проводять перше контрольоване порівняння на InfiniteBench серед трьох харнесів та трьох сімейств моделей.
+Progressive disclosure helps a lot when raw navigation is poor, but the benefit falls to near zero with a strong harness.
+Сприйняття поступового розкриття як автоматичного покращення може лише додати складності системи без точності.
+The research replaces intuition with measurement, showing when document packaging is actually worth it.      
+
+8. Self-Improving Agents Survey / Огляд агентів, що самоудосконалюються
+Frames a modern agent as a foundation model coupled with an operational scaffold of prompts, memory, tools, and control logic.
+Самоудосконалення трактується як самоініційоване оновлення ваг або каркаса.
+Methods are organized by learning signal source: generative demonstrations, evaluative feedback, and exploratory experience.
+Найбільш відкриті методи перепрограмують агента через самореферентні оновлення коду та цикли «генерація-тестування-виправлення».
+Provides a single map across software, web, gaming, science, and robotics to navigate scattered literature.   
+
+9. Always-On Agents / Постійно активні агенти
+Always-on agents depend on durable state spanning task ledgers, permissions, credentials, commitments, and provenance.
+Стан включає повноваження, зобов’язання та зовнішньо зафіксовані ефекти, що роблять агента значущим.
+Each piece of state is scored across six axes: authority, scope, mutability, provenance, recoverability, and actionability.
+Дослідження простежує життєвий цикл від запису та зчитування до забуття, аудиту та відкату.
+Treating durable state as a governed, auditable resource separates safe systems from those accumulating hidden risk.   
+
+10. Sakana Fugu
+Sakana Fugu combines distinct provider specializations into a family of orchestrator models acting as dynamic system builders.
+Fugu навчений розуміти запит і миттєво будувати адаптивну агентивну структуру, підсилюючи команду LLM-агентів.
+Reaches state-of-the-art results across SWE-Bench Pro, Terminal Bench, LiveCodeBench, GPQA-Diamond, Humanity's Last Exam, and CharXiv.
+Випущено Fugu (баланс якості та затримки) та Fugu-Ultra (пріоритет якості для найскладніших проблем).
+Combines fine-tuning, evolutionary algorithms, and reinforcement learning to point toward collective intelligence.   
